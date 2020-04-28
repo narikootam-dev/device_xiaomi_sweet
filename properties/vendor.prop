@@ -134,6 +134,9 @@ dalvik.vm.systemuicompilerfilter=speed
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.nsrm.bkg.evt=3955
