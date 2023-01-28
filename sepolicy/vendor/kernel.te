@@ -1,1 +1,2 @@
 dontaudit kernel mnt_vendor_file:dir search;
+allow kernel kernel:qipcrtr_socket create;
