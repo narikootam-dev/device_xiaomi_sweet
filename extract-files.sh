@@ -63,9 +63,6 @@ function blob_fixup() {
         vendor/lib64/camera/components/com.qti.node.watermark.so)
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
-        vendor/lib64/hw/hwcomposer.sm6150.so)
-            "${PATCHELF}" --add-needed "libsdmcore-shim.so" "${2}"
-            ;;
          vendor/etc/init/vendor.qti.rmt_storage.rc)
             sed -i "/shutdown critical/ i\  group system wakelock" "${2}"
             ;;
