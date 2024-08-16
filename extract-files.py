@@ -32,10 +32,17 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
+        'com.qualcomm.qti.dpm.api@1.0',
+        'libmmosal',
+        'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
     (
+        'libOmxCore',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
+
 blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libFaceDetectpp-0.5.2.so', 'vendor/lib64/libfacedet.so'): blob_fixup()
         .binary_regex_replace(b'libmegface.so', b'libfacedet.so')
@@ -45,6 +52,24 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libpiex_shim.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    ('vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
+    ('vendor/lib64/libarcsoft_hta.so', 'vendor/lib64/libarcsoft_super_night_raw.so', 'vendor/lib64/libhvx_interface.so', 'vendor/lib64/libmialgo_rfs.so'): blob_fixup()
+        .clear_symbol_version('remote_handle_close')
+        .clear_symbol_version('remote_handle_invoke')
+        .clear_symbol_version('remote_handle_open')
+        .clear_symbol_version('remote_handle64_close')
+        .clear_symbol_version('remote_handle64_invoke')
+        .clear_symbol_version('remote_handle64_open')
+        .clear_symbol_version('remote_register_buf_attr')
+        .clear_symbol_version('remote_register_buf')
+        .clear_symbol_version('rpcmem_alloc')
+        .clear_symbol_version('rpcmem_free')
+        .clear_symbol_version('rpcmem_to_fd'),
 }  # fmt: skip
 module = ExtractUtilsModule(
     'sweet',
@@ -52,7 +77,6 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    check_elf=False,
 )
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
