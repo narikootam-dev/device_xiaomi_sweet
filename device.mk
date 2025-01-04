@@ -303,12 +303,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libcodec2_vndk.vendor \
     libcodec2_hidl@1.0.vendor \
-    libOmxAacEnc \
-    libOmxAmrEnc \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libOmxVidcCommon \
