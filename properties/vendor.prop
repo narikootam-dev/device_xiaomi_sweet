@@ -146,7 +146,6 @@ ro.hardware.hwcomposer=sweet
 debug.sf.enable_egl_image_tracker=1
 debug.sf.auto_latch_unsignaled=1
 debug.sdm.support_writeback=0
-debug.sf.enable_transaction_tracing=false
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=15666666
 debug.sf.late.app.duration=16666666
