@@ -730,7 +730,7 @@ vendor/etc/seccomp_policy/codec2.vendor.ext.policy
 -vendor/lib/libAlacSwDec.so
 -vendor/lib/libApeSwDec.so
 -vendor/lib/libOmxG711Dec.so
--vendor/lib/libOmxVideoDSMode.so
+-vendor/lib/libOmxVideoDSMode.so;DISABLE_DEPS
 -vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 -vendor/lib/libmmosal.so;MODULE_SUFFIX=-vendor
 -vendor/lib/libqcodec2.so
@@ -906,7 +906,7 @@ vendor/etc/init/vendor.sensors.qti.rc
 -vendor/lib64/libsnsdiaglog.so
 -vendor/lib64/libssc.so
 -vendor/lib64/libssc_default_listener.so
--vendor/lib64/libssccalapi.so
+-vendor/lib64/libssccalapi.so;DISABLE_DEPS
 -vendor/lib64/sensors.ssc.so
 -vendor/lib64/sensors.touch.so
 
