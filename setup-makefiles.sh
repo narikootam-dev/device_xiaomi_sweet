@@ -47,6 +47,7 @@ function lib_to_package_fixup_vendor_variants() {
         libmpbase | \
         libmmosal | \
         vendor.qti.hardware.fm@1.0 | \
+        vendor.qti.hardware.tui_comm@1.0 | \
         vendor.qti.imsrtpservice@3.0)
             echo "$1_vendor"
             ;;
