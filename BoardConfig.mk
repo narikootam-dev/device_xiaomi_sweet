@@ -130,9 +130,6 @@ KERNEL_LD := LD=ld.lld
 BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # Media
 TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
