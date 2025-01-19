@@ -293,10 +293,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     android.system.keystore2
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \

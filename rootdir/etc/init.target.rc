@@ -106,10 +106,6 @@ on boot
     chmod 0664 /sys/devices/virtual/touch/touch_dev/double_tap
     chown system system /sys/devices/virtual/touch/touch_dev/double_tap
 
-    # Charging control
-    chown system system /sys/class/power_supply/battery/battery_charging_enabled
-    chmod 0666 /sys/class/power_supply/battery/battery_charging_enabled
-
     # Set fingerprint related permissions
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
