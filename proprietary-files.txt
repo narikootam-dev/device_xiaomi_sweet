@@ -8,10 +8,13 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libcdsprpc_system.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
+vendor/lib64/libcdsprpc_system.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
@@ -88,8 +91,8 @@ vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
-vendor/lib/vndk/libxlog.so
 vendor/lib/libqtigef.so
+vendor/lib/vndk/libxlog.so
 
 # Audio extensions
 vendor/lib/btaudio_offload_if.so
@@ -98,6 +101,7 @@ vendor/lib/libhdmiedid.so
 vendor/lib/libhfp.so
 vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
+
 
 # Alarm
 product/app/PowerOffAlarm/PowerOffAlarm.apk
@@ -114,14 +118,7 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
 
 # Batterysecret
 vendor/bin/batterysecret
@@ -130,18 +127,15 @@ vendor/etc/init/init.batterysecret.rc
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
-vendor/lib64/com.dsi.ant@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
-vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
@@ -157,6 +151,8 @@ vendor/lib64/lib_sr_models.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalhLDC.so
+vendor/lib64/libarcdualcamsat.so
+vendor/lib64/libarcsat.so
 vendor/lib64/libbeauty_face_interface.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_dirty.so
@@ -175,6 +171,7 @@ vendor/lib64/libdualcam_optical_zoom_control.so
 vendor/lib64/libdualcam_video_optical_zoom.so
 vendor/lib64/libft2vendor.so
 vendor/lib64/libhta.so
+vendor/lib64/libhta_hexagon_runtime.so
 vendor/lib64/libhvx_interface.so
 vendor/lib64/libmiai_portraitsupernight.so
 vendor/lib64/libmialgo_fs.so
@@ -184,7 +181,7 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_712.so
-vendor/lib64/libmpbase.so;MODULE=libmpbase.so_xiaomi
+vendor/lib64/libmpbase.so
 vendor/lib64/libmulticam_image_optical_zoom.so
 vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/librelight_only.so
@@ -366,6 +363,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5kgw3_wide.bin|727410454921cbf6d56837ebf5c930fb948d7f15
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5kgw3_wide.bin|34718fcf0dd5d3d30e383e02824145204772676d
 
+
 # Charger
 vendor/bin/hvdcp_opti
 
@@ -454,37 +452,32 @@ vendor/lib64/libtinyxml2_1.so
 # Display - from NX627J 20201029.204053
 vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
 
-# DPM - from OS1.0.6.0.THGMIXM
-system/framework/tcmclient.jar|bf99068d22c67fa08e9954497618d0b825c99e5f
-system_ext/bin/dpmd|d098df72c60697de359a80d6377689d98fb11221
-system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
-system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
-system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
-system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
-system_ext/framework/com.qti.dpmframework.jar|0a56461d843103824831df03bca81c93124f5576
-system_ext/framework/dpmapi.jar|cc7cfebc4111b2a39a1ce288505f84b7c90d15b5
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_system_ext|62e5bfe5c7525844a828e89360fde9694a7cdf96
-system_ext/lib64/libdpmctmgr.so|9d13e5ae9882f5b7e6ac31a9d073a66a27d1c465
-system_ext/lib64/libdpmfdmgr.so|b705b098462e1198fc24175732d687142cc26562
-system_ext/lib64/libdpmframework.so|c3d8d6f1745c19d29466e9de823ff56f9f8f6993
-system_ext/lib64/libdpmtcm.so|57b6c42d581305d8ef16aa127cd4cd1672d2e7f1
-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|95cadf2957f40ea816230381f1e6cbb2c515668f
-vendor/bin/dpmQmiMgr|61a421804559b0e461439c19088acc01b871982a
-vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_vendor|d9f1aa7f93b928f42499d613d20ccbc60f279097
-vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
+# DPM
+system_ext/bin/dpmd
+system_ext/etc/dpm/dpm.conf
+system_ext/etc/init/dpmd.rc
+system_ext/etc/permissions/com.qti.dpmframework.xml
+system_ext/etc/permissions/dpmapi.xml
+system_ext/framework/com.qti.dpmframework.jar
+system_ext/framework/dpmapi.jar
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_system_ext
+system_ext/lib64/libdpmctmgr.so
+system_ext/lib64/libdpmfdmgr.so
+system_ext/lib64/libdpmframework.so
+system_ext/lib64/libdpmtcm.so
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+vendor/bin/dpmQmiMgr
+vendor/etc/init/dpmQmiMgr.rc
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_vendor
+vendor/lib64/libdpmqmihal.so
 
 # DRM
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
-vendor/lib/libStDrvInt.so
-vendor/lib/libsecureui.so
-vendor/lib/libsecureui_svcsock.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libStDrvInt.so
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
@@ -495,14 +488,8 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 vendor/lib64/libtrustedapploader.so
-
-# DRM (libspl) - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/lib/libspl.so|ec1ae86b1727e33c87fd8c00ebe02d8734510745
-vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
 
 # DRM widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
@@ -515,7 +502,13 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
+
+# Fingerprint
+vendor/lib64/hw/fingerprint.fortsense.so:vendor/lib64/hw/fingerprint.fortsense.sm6150.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sm6150.so
+vendor/lib64/vendor.sw.swfingerprint@2.0.so
 
 # FM
 system_ext/lib64/fm_helium.so
@@ -524,42 +517,37 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor
 
-# Fingerprint
-vendor/lib64/hw/fingerprint.fortsense.so:vendor/lib64/hw/fingerprint.fortsense.sm6150.so
-vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sm6150.so
-vendor/lib64/vendor.sw.swfingerprint@2.0.so
-
-# Graphics (Adreno) - from OS1.0.8.0.THGMIXM 
-vendor/lib/egl/eglSubDriverAndroid.so|2caaf6ab18cfe56f6d445b60cb62f81b18bc31d2
-vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|e6382c9115d5d471c32c010fc50dcbbf6a523d1f
-vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
-vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|9838de96e98e261d3b631030cdae01be2c349687
-vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|9ec9c053592e58be935e8ae5e0a9d362c101773a
-vendor/lib/egl/libq3dtools_esx.so|cda96a119e6fa4bf121af1c8ddf7719583df4e2a
-vendor/lib/hw/vulkan.adreno.so|14cf91d8a485912394ad76284f36db4d2b3519df
-vendor/lib/libC2D2.so|91f015cad79024fdbb6a5603cce48693e58a4510
-vendor/lib/libCB.so|2233035ad8566aa91488c432e4c84febe5f47fe5
-vendor/lib/libOpenCL.so|087fe776117a61287e2301061feeeb060ebb60a9
-vendor/lib/libadreno_utils.so|74b4e1bc0dc8ef03fac5b7ab95e2d57502c2e733
-vendor/lib/libc2d30_bltlib.so|9977576a557bef02de296e742a4eeecc711fad9c
-vendor/lib/libgsl.so|1e9ea0871847e100f58f5d5b102640e5f8973d73
-vendor/lib/libllvm-glnext.so|452148b739abab3db2ddd8e7d0b04f3788c8279f
-vendor/lib/libllvm-qcom.so|2f896317139accdb781c3a1a208525f062862983
-vendor/lib64/egl/eglSubDriverAndroid.so|5b453fbadfdbb4511c07452573105fed65a681b3
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|e7a43ed0337890618bb6881460c51def05a1500f
-vendor/lib64/egl/libGLESv1_CM_adreno.so|0a2a648ca2dcd887ea62860bbfa2ef397f01d42d
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|5d46a357550b7ee836227688fbbf7e4d7bf67616
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
-vendor/lib64/egl/libq3dtools_esx.so|d17193c3b546a683f03efd1ebc6430feadc94059
-vendor/lib64/hw/vulkan.adreno.so|3b96ff576736a0b29ceb9b8cae7d906d8a725cee
-vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
-vendor/lib64/libCB.so|beb4719035c863d12f5f796c6d80802ebd94b193
-vendor/lib64/libOpenCL.so|0c5d889028ecb59ed9bb0c7522094dbebc468954
-vendor/lib64/libadreno_utils.so|3cf87d8aaa8c6a679d3e5b8c86e848838ed86324
-vendor/lib64/libc2d30_bltlib.so|adbd12db0fbd7c840b75af49df450833afd9be58
-vendor/lib64/libgsl.so|a4cac2794ec2cb7c4e00ec0f674af8a6b2bfe77c
-vendor/lib64/libllvm-glnext.so|41a295fb22cf14304634425b1a192a6d572a8a55
-vendor/lib64/libllvm-qcom.so|512c0db7ea845f992f382e53da4ca4c988dc5837
+# Graphics
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
 
 # Graphics firmware
 vendor/firmware/a615_zap.b00
@@ -575,98 +563,98 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# GPS - from OS1.0.6.0.THGMIXM
-vendor/bin/loc_launcher|f170dc02d9046fcde1fc58656b0387773a85e78d
-vendor/bin/lowi-server|317bd33a243fae53885a526ffc06e9dedc6d7bfd
-vendor/bin/slim_daemon|92e0456fddf986faadf3adcd5a264abbd233d2f2
-vendor/bin/xtra-daemon|424a623074faaf533454243d18cf113ad783caf2
-vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|3a0a782b9a3de2f156668ebbbd4de19d206b8ce4
-vendor/lib64/libcdfw.so|1ddaeea37b560adae39928abadbf41d792e3b1c0
-vendor/lib64/libcdfw_remote_api.so|558636f4fa4c17f29cb644c8c6e07766b7240005
-vendor/lib64/libdataitems.so|90379d3b3d036ed26bdad94a52a1cdf406f6b562
-vendor/lib64/libgdtap.so|b46b7f6caaf2c2d4f43ed263bcdff3edfdc9f0f1
-vendor/lib64/libizat_client_api.so|810bc49f9b8d2f798552b2ccb10f413757412264
-vendor/lib64/libizat_core.so|e5b6eb1ff904ca5f29c5aa82df80686d1cf16076
-vendor/lib64/liblbs_core.so|3591b0d6d0312906a6942fe63aabe79879e9e78b
-vendor/lib64/libloc_api_v02.so|a889ca9bb6c9cf45682a1e34c254f384c14080fb
-vendor/lib64/libloc_socket.so|da7fb549487c50cb2b58600a7a7a7d75f2a05c24
-vendor/lib64/liblocationservice.so|87b8ffccd7b7620e195b59cfbddde464ab7fd196
-vendor/lib64/liblocationservice_glue.so|95f05d44ea815d85e8f0e024dd8e7b045813d488
-vendor/lib64/liblowi_client.so|e1b7b4f6be929c8f803245ddc318cbce2c123471
-vendor/lib64/liblowi_wifihal.so|d4a9120e357234f0396318976e7ab35c520da27d
-vendor/lib64/libqcc_file_agent.so|cd70ce305d5036a027060aa989b0dcbcfab8edb6
-vendor/lib64/libxtadapter.so|495af82c252ccca8257c5281ba699da214fd1539
-vendor/lib64/vendor.qti.gnss@1.0.so|5cc0d0c8e7a8083f5892eb303ab1e6d4c9d66639
-vendor/lib64/vendor.qti.gnss@1.1.so|9a516f4b1b55798f0ec1ebead0c653ad65546517
-vendor/lib64/vendor.qti.gnss@1.2.so|1266128a166aed91804aebc1513524eb09424f64
-vendor/lib64/vendor.qti.gnss@2.0.so|8dc78f86e141c05f5b404cb3236910896c10d941
-vendor/lib64/vendor.qti.gnss@2.1.so|81142c88b15688a671bd372f013dfb2e77d1998d
-vendor/lib64/vendor.qti.gnss@3.0.so|1c0b41eddcc4789e1ea842be02d511afad123a8e
-vendor/lib64/vendor.qti.gnss@4.0-service.so|04233086636be1aeaaedf88d3126803b0c40c11d
-vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
+# GPS
+vendor/bin/loc_launcher
+vendor/bin/lowi-server
+vendor/bin/slim_daemon
+vendor/bin/xtra-daemon
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
+vendor/lib64/libdataitems.so
+vendor/lib64/libgdtap.so
+vendor/lib64/libizat_client_api.so
+vendor/lib64/libizat_core.so
+vendor/lib64/liblbs_core.so
+vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_socket.so
+vendor/lib64/liblocationservice.so
+vendor/lib64/liblocationservice_glue.so
+vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_wifihal.so
+vendor/lib64/libqcc_file_agent.so
+vendor/lib64/libxtadapter.so
+vendor/lib64/vendor.qti.gnss@1.0.so
+vendor/lib64/vendor.qti.gnss@1.1.so
+vendor/lib64/vendor.qti.gnss@1.2.so
+vendor/lib64/vendor.qti.gnss@2.0.so
+vendor/lib64/vendor.qti.gnss@2.1.so
+vendor/lib64/vendor.qti.gnss@3.0.so
+vendor/lib64/vendor.qti.gnss@4.0-service.so
+vendor/lib64/vendor.qti.gnss@4.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# IMS - from OS1.0.6.0.THGMIXM
-system_ext/lib64/lib-imsvideocodec.so|a9a8c609d40f42fc29dd7976d1148363010fcc57
-system_ext/lib64/lib-imsvt.so|dcf23823c74ae9844b6a5317f798b993c45b2e41
-system_ext/lib64/lib-imsvtextutils.so|1dfb5640cd23a92e7ca55a84118b2966653aebc7
-system_ext/lib64/lib-imsvtutils.so|67ce2fc38fbf819e397b19e1ff46c70183e890d2
-system_ext/lib64/libdiag_system.so|dc2de2086df46099fe97391d1d8162485bacba3c
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|eabd9c136541982655d3f7a52360fb5acb03407a
-system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|48bf6d599b3d2fabc30b88e6f9db37ad5652844f
-system_ext/lib64/vendor.qti.diaghal@1.0.so|92555fd8ae83569d61a26ea3ab33e3f2d89a5729
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE=vendor.qti.imsrtpservice@3.1_system_ext|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
-system_ext/priv-app/ims/ims.apk|ae1b0b678e6fd8c52962d30a715f2d9cdf381248
-vendor/bin/ims_rtp_daemon|c5c4ead4ef77b0b8e34f27015c3ee10381bb6996
-vendor/bin/imsdatadaemon|512ed8dca5773735fb0ae782b579bb3d7519db40
-vendor/bin/imsqmidaemon|bd169127f1ce80ddccfc90710be975db85c3a06e
-vendor/bin/imsrcsd|bf29aac14856f29268c01599e5f6c7c6ae520685
-vendor/etc/init/ims_rtp_daemon.rc|06510e936890f51aeb76f2cf3ed5dbe45e67ac20
-vendor/etc/init/imsdatadaemon.rc|29face37c174aebcd1358f7d7ad0bd4baf83063b
-vendor/etc/init/imsqmidaemon.rc|dda16d842b7c65296e97bc9921b723a43b152ba3
-vendor/etc/init/imsrcsd.rc|b54ef0ee372a909d4112b3feb933c608c10324cb
-vendor/etc/seccomp_policy/imsrtp.policy|7ea8b4012da7bde98fc91bd882185b32784793cc
-vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|4762336f206fd903503c8d6efd3ee7140286dfca
-vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|e96b00cf21b879b8944a3425c0689d88103046dc
-vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so|eda70b402593516893a31490a22a9a985cf6241c
-vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|45c69806bb6041451a50b38d63231a7fa5c98780
-vendor/lib64/com.qualcomm.qti.uceservice@2.1.so|271bc984ab857afafaa00cfb37530d51fef51df0
-vendor/lib64/com.qualcomm.qti.uceservice@2.2.so|a550be95337ed6e56f6ed7374f9f97b1ae5f4085
-vendor/lib64/com.qualcomm.qti.uceservice@2.3.so|e3fd16a1a26a94a25a4ecf604557c7626a3d02f3
-vendor/lib64/lib-imscmservice.so|e3559e804359dd90cda664e2fc415a1d2f42d29b
-vendor/lib64/lib-imsdpl.so|123b4e055552611041b6a16d6b0f803413eafc1f
-vendor/lib64/lib-imsqimf.so|6935bc409e72781d92b42e222ef9942b849fc6e6
-vendor/lib64/lib-imsrcs-v2.so|3f4feb33dc5506302528ab5176dd024ef322731a
-vendor/lib64/lib-imsrcsbaseimpl.so|83e91cb4c58408d3ab936a20b27550cdc2e833b8
-vendor/lib64/lib-imsvtcore.so|1854984c2f1ff12a4ba698b5b5cb26a4688211ee
-vendor/lib64/lib-imsxml.so|f0c84e6461e37dab57d501c72b03536192fa2021
-vendor/lib64/lib-rcsconfig.so|b1e2789988e1e85cccf79cf2fad57817ea1673e3
-vendor/lib64/lib-rtpcommon.so|852ddb0fb054292f416d524215deb15fc60731de
-vendor/lib64/lib-rtpcore.so|18f4dd4743b322eb66ff976615b67fc46b99c039
-vendor/lib64/lib-rtpsl.so|a4acf5b8872f9bcb38cff67dcb3d529dfb020d23
-vendor/lib64/lib-siputility.so|d478b100a73911120e3cb92474aa0f143e5345a9
-vendor/lib64/lib-uceservice.so|5356c7f1748d55ed7abef67d950b186e0a8e2f0f
-vendor/lib64/librcc.so|f5a6a1f8cdec5f71ce3a0396cf2d9ef16dc3aa0d
-vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|c8fb9453407ca3086b079c7d6c505fa1f3cd24f6
-vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so|a524969ab3a03182b4199fcd315971a2b80b6eb4
-vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so|e9efd54965aed691fcfc2946a0d314f3a02e76e1
-vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so|4366a244c9d96ffcab5efc37b4f964538f469ee5
-vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so|efebb8dfcf630b81282bd705e3a38c2c883de58c
-vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so|e933c35ab5e109c2647d38fbf9ea7f562d063fe8
-vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so|ffe8a8d579da1bc14465cd2f425ad3d0e4406b27
-vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so|4e473ba6aff58d1dbc8f65232b8a4017101aca06
-vendor/lib64/vendor.qti.ims.callcapability@1.0.so|40bea84fa6fcc19591f7fe115962cdf7301e4970
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so|d65de10f8e1ceddd1e6c9c3f2bd210ccb2f04750
-vendor/lib64/vendor.qti.ims.factory@1.0.so|21c91c2aea181c6bb0f66790fd82944dcf117a6d
-vendor/lib64/vendor.qti.ims.factory@1.1.so|b4c803a2d5f3bc7a1de93957d163405168308db4
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|94c1552fd129d24f454843d5174fcbd4524b5992
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|91521d031060612dbf53d4a6437eba56780c768a
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|bd0db76d555c51971dcfcce62d981f987af32811
-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|f52f0cd5e19455eba97dea61542217d4aa5c1841
-vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|beeb9324900da6582f92ffab225cc0d314bf71bd
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
+# IMS
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE=vendor.qti.imsrtpservice@3.1_system_ext
+system_ext/priv-app/ims/ims.apk
+vendor/bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/imsrcsd
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/imsdatadaemon.rc
+vendor/etc/init/imsqmidaemon.rc
+vendor/etc/init/imsrcsd.rc
+vendor/etc/seccomp_policy/imsrtp.policy
+vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
+vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
+vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.3.so
+vendor/lib64/lib-imscmservice.so
+vendor/lib64/lib-imsdpl.so
+vendor/lib64/lib-imsqimf.so
+vendor/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-imsrcsbaseimpl.so
+vendor/lib64/lib-imsvtcore.so
+vendor/lib64/lib-imsxml.so
+vendor/lib64/lib-rcsconfig.so
+vendor/lib64/lib-rtpcommon.so
+vendor/lib64/lib-rtpcore.so
+vendor/lib64/lib-rtpsl.so
+vendor/lib64/lib-siputility.so
+vendor/lib64/lib-uceservice.so
+vendor/lib64/librcc.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
+vendor/lib64/vendor.qti.ims.callcapability@1.0.so
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so
+vendor/lib64/vendor.qti.ims.factory@1.0.so
+vendor/lib64/vendor.qti.ims.factory@1.1.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
+vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
+vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor
 
 # IPA
 vendor/etc/init/ipa_fws.rc
@@ -683,11 +671,6 @@ vendor/bin/msm_irqbalance
 
 # IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
-
-# NFC
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -710,11 +693,6 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vppservice.rc
 vendor/etc/seccomp_policy/codec2.vendor.base.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext.policy
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxVpp.so
 vendor/lib/libmmosal.so;MODULE=libmmosal_vendor
 vendor/lib/libqcodec2.so
 vendor/lib/libvppclient.so
@@ -730,18 +708,10 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
-# Neural Networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
-vendor/lib64/libhexagon_nn_stub.so
-vendor/lib64/libhta_hexagon_runtime.so
-vendor/lib64/libnpu.so
-vendor/lib64/unnhal-acc-adreno.so
-vendor/lib64/unnhal-acc-common.so
-vendor/lib64/unnhal-acc-hta.so
-vendor/lib64/unnhal-acc-hvx.so
+# NFC
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # Peripheral Manager
 vendor/bin/pm-proxy
@@ -780,95 +750,86 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libril-qc-hal-qmi.so
 
-# RIL - from OS1.0.6.0.THGMIXM
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|ad5d348c96020f7cd0aa45a2db527648d775839e
-system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
-system_ext/framework/qcrilhook.jar|8ea2315fc78354ac930e6a4f7ef742e998af57c1
-system_ext/framework/qti-telephony-common.jar|7d199d9f149342c8ed522a476248f485f4e1f6ce
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|511b011b8bd3aa10349b52af4058ce101c6abe1f
-vendor/bin/adpl|e267176086e515486a992c98f2bc540da6e8c555
-vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
-vendor/bin/netmgrd|12a41e374e0662b6a8821b3bdd639fde4adf23f1
-vendor/bin/qti|dfee6189c14989429bb3320066fdc4b9edbca2d7
-vendor/bin/rmt_storage|b0906f2afc42851bada47d49479cafeed888484a
-vendor/bin/tftp_server|d3c9f04e306222a13d51dc3ee089688cc6a3c929
-vendor/etc/data/dsi_config.xml|27a9616809d2e2355640d5e7cdb7268eba9f6a0d
-vendor/etc/data/netmgr_config.xml|b87b057d87139c7ac866dc5f75c498de1e8ab361
-vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
-vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
-vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
-vendor/etc/init/qcrild.rc|63f82cc56f184e598643ce827fdcc1b09773858c
-vendor/etc/init/vendor.qti.rmt_storage.rc|557a4bbdb124edb853258e4a0ed0e1c81da16fd7
-vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
-vendor/lib64/deviceInfoServiceModule.so|d9c829e17f043facc78d142c20a644a37261f777
-vendor/lib64/libconfigdb.so|2991df2eb6187d8e4858dd6d05508c84611a450b
-vendor/lib64/libdsi_netctrl.so|2040fbd661a67caa1160ae643ba3c60ce4324416
-vendor/lib64/liblqe.so|5772dc49b1f5856255fa6e33f06d891e29bb4f18
-vendor/lib64/libnetmgr.so|3bef5c14055a9babc9d3a7bf29675ea7528c869a
-vendor/lib64/libnetmgr_common.so|1dd1c929433c67d16a58b14d6fe1d6497cea7ee0
-vendor/lib64/libnetmgr_nr_fusion.so|bbe6fd1560d4da257d6f00f2769dc85892cb2517
-vendor/lib64/libnetmgr_rmnet_ext.so|a3ec030ddb6b8447a86480560a966d2a820e8766
-vendor/lib64/libnlnetmgr.so|b5c3f90290b7dad0e323e81be4769a9a7bf869ce
-vendor/lib64/libpdnotifier.so|ee4260129d605653bca902db9ba1e5818fdbd9a0
-vendor/lib64/libqcmaputils.so|3f1c6fe433d0787fc727e12329420c814019bb7d
-vendor/lib64/libqcrilFramework.so|dc62bd4f3685c420d43f4f5f4141d5908212df86
-vendor/lib64/libqcrildatactl.so|6b8f581a702bf25799232c3a5def95c5b6d6e8fd
-vendor/lib64/libqdi.so|b97bf634cec48fc5c4c6b6c00484d2cc0fe2dac5
-vendor/lib64/libqdp.so|77b4c9ef61cd124231960ded158893fa055e9ed0
-vendor/lib64/libril-qc-logger.so|424da55c374153c34283562da0339d47b6e631f8
-vendor/lib64/librilqmiservices.so|9830f7ffec26e1c056e966c73d410ad8010cce1e
-vendor/lib64/libsystem_health_mon.so|2cc55d78ea00b9fe8af9cd88fd8ef8c31ee5f494
-vendor/lib64/qcrild_librilutils.so|f12ebc05420621d930ffe7f4b4859117e3c9fc35
-vendor/lib64/qtibus.so|cef56e2d40f69b6b6c60b93edb612744395f7359
-vendor/lib64/qtimutex.so|026d9acf29b23ab0419abfe3066bd4c9f13bf7ae
-vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|39bf1d748c3bb90d38be5d031dcd0024b1f2bb2f
-vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|702dd62c50c91446de473f32e31da3a85ba0aea9
-vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|3d84dfd841e6bc918b8e92f3e8f4e45d2051708b
-vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|fc4ababd2cc8ff9f1f253194a5998a0596cf83aa
-vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|cff3174157c2a536e1d4b69b2cd43e4c2c873f5d
-vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so|9164fa7d396bb8acb6abd5c703e4a840149b3812
-vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|f293c5742455dd7873138472f0ab3c0ba2affd8b
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|5112fa42a11ee4ab128f8c78e8c807712c9866a1
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so|36bfbb8f0d97269ee53f554ad9287f648879545a
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so|e2bd17fefec0df2e55c188c6842268eda8a2edae
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so|c9f2b8047fae40f4d72f11160c6ac0963ce58630
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so|8d8ca1344b1116273e40d98c251cad36e95ca7a5
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so|afc8812c3eee1fce085bf224a22166654b75c1be
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so|37645f528cd92a2ea487a6ba925b667c4c29eb0a
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so|e8115942c8e041f2f594018d8a2a018103a5fcb5
-vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|5bfd666e62aed31a272ea2f7cd6e699778aeec92
-vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|74cd56e716d8401e87a9f0914f4840539bdc30d4
-vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so|cfdfdd616ff0704809f2ec37b1c9e94b8ffb77a1
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|5ec80005a20a2ef66bae99801f2ba060c7e204bb
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|663b65448ec8f5972337e1bbdc08ef5d4b08e8fa
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b114157c5423de604e5ba93ade
-vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
-vendor/radio/qcril_database/qcril.db|fcf9ec36fa2d3f1da2653ee2f31be4bccfdf1805
-vendor/radio/qcril_database/upgrade/0_initial.sql|90ade39e225e3b5efef1404a807f4dd766c6804d
-vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
-vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
-vendor/radio/qcril_database/upgrade/31_version_update_ecc_table.sql|ec8df09b1690ea24e2a48434f178dbf9cce53b20
-vendor/radio/qcril_database/upgrade/32_version_update_ecc_table.sql|6ec526d3657a6a34d18ae7fa463dcbb89b3f9ee3
-vendor/radio/qcril_database/upgrade/33_version_update_ecc_table.sql|760b60cbc9edb781420942e3a2e74816deeb2088
-vendor/radio/qcril_database/upgrade/34_version_update_ecc_table.sql|323473dc4a9dc115db6b870b76f2ad13dcfc53bd
-vendor/radio/qcril_database/upgrade/35_version_update_ecc_table.sql|fc1520195449ebbad20cee8bc6fac79e417fff2b
-vendor/radio/qcril_database/upgrade/36_version_update_ecc_table.sql|8dddcf1e30bcfbca20bfe5c158923bbadf268684
-vendor/radio/qcril_database/upgrade/37_version_update_ecc_table.sql|381f3e92b86606d88a47c2179b9baf959c6b5a38
-vendor/radio/qcril_database/upgrade/38_version_update_ecc_table.sql|57c63cd162776b48d0eddda182894305b8c66bae
-vendor/radio/qcril_database/upgrade/39_version_update_ecc_table.sql|862c4cccc2f4c15a7faca11f864d3576f87a0a1e
-vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
-vendor/radio/qcril_database/upgrade/40_version_update_ecc_table.sql|83a1e0bdaf6115678964294223610ac0d84af67e
-vendor/radio/qcril_database/upgrade/41_version_update_ecc_table.sql|64d4330c15098d54e3471daaa21332d89eb5eba5
-vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|0734c6a2863edadc7a8422b8310d267c594d11a0
-vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|fcb2cba3bfd718ecdc8d3cfac3a0b2b2c7e8c506
-vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb48906b37885e060429f79c9fd6bdbf
+# RIL
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/etc/permissions/qcrilhook.xml
+system_ext/framework/qcrilhook.jar
+system_ext/framework/qti-telephony-common.jar
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/bin/adpl
+vendor/bin/hw/qcrild
+vendor/bin/netmgrd
+vendor/bin/qti
+vendor/bin/rmt_storage
+vendor/bin/tftp_server
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/dataadpl.rc
+vendor/etc/init/dataqti.rc
+vendor/etc/init/netmgrd.rc
+vendor/etc/init/qcrild.rc
+vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.tftp.rc
+vendor/lib64/deviceInfoServiceModule.so
+vendor/lib64/libconfigdb.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/liblqe.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+vendor/lib64/libnetmgr_nr_fusion.so
+vendor/lib64/libnetmgr_rmnet_ext.so
+vendor/lib64/libnlnetmgr.so
+vendor/lib64/libpdnotifier.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libqcrilFramework.so
+vendor/lib64/libqcrildatactl.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/libril-qc-hal-qmi.so
+vendor/lib64/libril-qc-logger.so
+vendor/lib64/librilqmiservices.so
+vendor/lib64/libsystem_health_mon.so
+vendor/lib64/qcrild_librilutils.so
+vendor/lib64/qtibus.so
+vendor/lib64/qtimutex.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
+vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+vendor/radio/qcril_database/qcril.db
+vendor/radio/qcril_database/upgrade/0_initial.sql
+vendor/radio/qcril_database/upgrade/1_version_intro.sql
+vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
+vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
+vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
+
 
 # Sensors
 vendor/bin/sensors.qti
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
+vendor/lib64/libnanopb.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
@@ -927,25 +888,12 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/judge_calibrated.json
 vendor/etc/sensors/sns_reg_config
 
-# Snapdragon Computer Vision Engine
-vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectSegmentation_stub.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+# Sensors Ultrasound
+vendor/etc/elliptic_sensor.xml
+vendor/lib64/libnotifyaudiohal.so
+vendor/lib64/libultrasound.so
+vendor/lib64/sensors.elliptic.so
+vendor/lib64/sensors.mius.proximity.so
 
 # Soter
 vendor/app/SoterService/SoterService.apk
@@ -953,25 +901,6 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
-
-# Time
-vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
-vendor/lib64/libtime_genoff.so
-
-# TUI
-system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# Sensors Ultrasound
-vendor/etc/elliptic_sensor.xml
-vendor/lib64/libnotifyaudiohal.so
-vendor/lib64/libultrasound.so
-vendor/lib64/sensors.elliptic.so
-vendor/lib64/sensors.mius.proximity.so
 
 # Thermal
 vendor/bin/mi_thermald
@@ -993,119 +922,11 @@ vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
 
-# Vibrator
-vendor/firmware/AcousticGuitar_RTP.bin
-vendor/firmware/Atlantis_RTP.bin
-vendor/firmware/Bottle_RTP.bin
-vendor/firmware/Bubble_RTP.bin
-vendor/firmware/Bullfrog_RTP.bin
-vendor/firmware/Burst_RTP.bin
-vendor/firmware/Candy_RTP.bin
-vendor/firmware/Carousel_RTP.bin
-vendor/firmware/Celesta_RTP.bin
-vendor/firmware/Charge_Wire_RTP.bin
-vendor/firmware/Charge_Wireless_RTP.bin
-vendor/firmware/Childhood_RTP.bin
-vendor/firmware/Chirp_RTP.bin
-vendor/firmware/Clank_RTP.bin
-vendor/firmware/Conf_MultipleTest.ini
-vendor/firmware/Country_RTP.bin
-vendor/firmware/Cowboy_RTP.bin
-vendor/firmware/Crystal_RTP.bin
-vendor/firmware/DigitalUniverse_RTP.bin
-vendor/firmware/FOD_Motion1_RTP.bin
-vendor/firmware/FOD_Motion2_RTP.bin
-vendor/firmware/FOD_Motion3_RTP.bin
-vendor/firmware/FOD_Motion4_RTP.bin
-vendor/firmware/FOD_Motion_Aurora_RTP.bin
-vendor/firmware/FOD_Motion_Planet_RTP.bin
-vendor/firmware/FaceID_Wrong1_RTP.bin
-vendor/firmware/FaceID_Wrong2_RTP.bin
-vendor/firmware/FadeIn_RTP.bin
-vendor/firmware/FadeOut_RTP.bin
-vendor/firmware/Fairyland_RTP.bin
-vendor/firmware/Fantasy_RTP.bin
-vendor/firmware/Field_Trip_RTP.bin
-vendor/firmware/Flute_RTP.bin
-vendor/firmware/Fresh_RTP.bin
-vendor/firmware/Frog_RTP.bin
-vendor/firmware/Gesture_UpHold_RTP.bin
-vendor/firmware/Gesture_UpSlide_RTP.bin
-vendor/firmware/Glee_RTP.bin
-vendor/firmware/Guitar_RTP.bin
-vendor/firmware/Harp_RTP.bin
-vendor/firmware/Ice_Latte_RTP.bin
-vendor/firmware/IncomingMessage_RTP.bin
-vendor/firmware/Kung_Fu_RTP.bin
-vendor/firmware/Lollipop_RTP.bin
-vendor/firmware/MIX_RTP.bin
-vendor/firmware/MessageSent_RTP.bin
-vendor/firmware/MiClassicRemix_RTP.bin
-vendor/firmware/MiHouse_RTP.bin
-vendor/firmware/MiJazz_RTP.bin
-vendor/firmware/MiMix2_RTP.bin
-vendor/firmware/MiRemix_RTP.bin
-vendor/firmware/Mi_RTP.bin
-vendor/firmware/Moment_RTP.bin
-vendor/firmware/Mountain_Spring_RTP.bin
-vendor/firmware/NFC_card_rtp.bin
-vendor/firmware/NFC_card_slow_rtp.bin
-vendor/firmware/NotificationXylophone_RTP.bin
-vendor/firmware/Orange_RTP.bin
-vendor/firmware/Potion_RTP.bin
-vendor/firmware/Radar_RTP.bin
-vendor/firmware/Reveries_RTP.bin
-vendor/firmware/Space_Age_RTP.bin
-vendor/firmware/Spring_RTP.bin
-vendor/firmware/Swoosh_RTP.bin
-vendor/firmware/ToyRobot_RTP.bin
-vendor/firmware/Unlock_Failed_RTP.bin
-vendor/firmware/bandage_RTP.bin
-vendor/firmware/crawl_RTP.bin
-vendor/firmware/door_open_RTP.bin
-vendor/firmware/drv2604.bin
-vendor/firmware/firearms_akm_RTP.bin
-vendor/firmware/firearms_awm_RTP.bin
-vendor/firmware/firearms_dp28_RTP.bin
-vendor/firmware/firearms_m16a4_RTP.bin
-vendor/firmware/firearms_mini14_RTP.bin
-vendor/firmware/firearms_p18c_RTP.bin
-vendor/firmware/firearms_qbz_RTP.bin
-vendor/firmware/firearms_s1897_RTP.bin
-vendor/firmware/firearms_ump9_RTP.bin
-vendor/firmware/firearms_vss_RTP.bin
-vendor/firmware/grenade_RTP.bin
-vendor/firmware/grenade_explosion_RTP.bin
-vendor/firmware/launcher_edit_rtp.bin
-vendor/firmware/launcher_icon_selection_rtp.bin
-vendor/firmware/lockscreen_camera_entry_rtp.bin
-vendor/firmware/magazine_quick_RTP.bin
-vendor/firmware/new_iconfolder_rtp.bin
-vendor/firmware/notification_cleanall_rtp.bin
-vendor/firmware/notification_remove_rtp.bin
-vendor/firmware/notification_setting_close_rtp.bin
-vendor/firmware/offline_countdown_RTP.bin
-vendor/firmware/osc_rtp_24K_5s.bin
-vendor/firmware/pan_RTP.bin
-vendor/firmware/punch_RTP.bin
-vendor/firmware/scene_bomb_RTP.bin
-vendor/firmware/scene_bomb_injury_RTP.bin
-vendor/firmware/scene_closeparachute_RTP.bin
-vendor/firmware/scene_getshot_RTP.bin
-vendor/firmware/scene_jump_RTP.bin
-vendor/firmware/scene_openparachute_RTP.bin
-vendor/firmware/scene_step_RTP.bin
-vendor/firmware/scope_off_RTP.bin
-vendor/firmware/scope_on_RTP.bin
-vendor/firmware/screenshot_rtp.bin
-vendor/firmware/task_cleanall_rtp.bin
-vendor/firmware/uninstall_animation_rtp.bin
-vendor/firmware/uninstall_dialog_rtp.bin
-vendor/firmware/vehicle_buggy_RTP.bin
-vendor/firmware/vehicle_collision_RTP.bin
-vendor/firmware/vehicle_dacia_RTP.bin
-vendor/firmware/vehicle_moto_RTP.bin
-vendor/firmware/vehicle_plane_RTP.bin
+# Time
+vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/etc/init/init.time_daemon.rc
+vendor/lib64/libtime_genoff.so
 
 # WLAN
 vendor/bin/cnss-daemon
