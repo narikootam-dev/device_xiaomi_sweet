@@ -51,7 +51,6 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 TARGET_PROVIDES_AUDIO_EXTNS := true
 USE_XML_AUDIO_POLICY_CONF := 1
-AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sweet,sweetin
@@ -96,6 +95,7 @@ LOC_HIDL_VERSION := 4.0
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
+    vendor/oneplus/dolby/vintf/dolby_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/hidl/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml

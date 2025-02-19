@@ -21,7 +21,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/sweet/sweet-vendor.mk)
 
 # Call the dolby setup
-$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product, vendor/oneplus/dolby/dolby.mk)
 
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, vendor/xiaomi/sweet-miuicamera/products/miuicamera.mk)
@@ -54,7 +54,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl\
-    android.hardware.audio.sounddose-vendor-impl\
     libaudioroute.vendor\
     libstagefright_softomx_plugin.vendor 
 
