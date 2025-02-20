@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl\
+    android.hardware.audio.sounddose-vendor-impl\
     libaudioroute.vendor\
     libstagefright_softomx_plugin.vendor 
 
