@@ -16,8 +16,8 @@
 
 BOARD_VENDOR := xiaomi
 
-# Inherit from proprietary files for miuicamera
--include vendor/xiaomi/sweet-miuicamera/products/board.mk
+# MiuiCamera
+-include device/xiaomi/miuicamera-sweet/BoardConfig.mk
 
 DEVICE_PATH := device/xiaomi/sweet
 
