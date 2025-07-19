@@ -62,6 +62,16 @@ ro.control_privapp_permissions=log
 # WiFi
 wifi.interface=wlan0
 
+# LMKD - helios-user-14-14-23-05.00-UG-U05-STD-HEL-04-5-release-keys
+ro.lmk.enable_userspace_lmk=true
+ro.lmk.kill_heaviest_task_dup=true
+ro.lmk.enhance_batch_kill=false
+ro.lmk.enable_watermark_check=true
+ro.lmk.use_new_strategy_dup=true
+ro.lmk.super_critical=606
+ro.lmk.direct_reclaim_pressure=45
+ro.lmk.reclaim_scan_threshold=0
+
 # RIL Powersaving
 persist.radio.add_power_save=1
 pm.sleep_mode=1
