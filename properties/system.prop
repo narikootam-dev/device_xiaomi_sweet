@@ -64,7 +64,7 @@ wifi.interface=wlan0
 
 # LMKD
 ro.lmk.low=1001
-ro.lmk.medium=0
+ro.lmk.medium=800
 ro.lmk.critical=0
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=50
