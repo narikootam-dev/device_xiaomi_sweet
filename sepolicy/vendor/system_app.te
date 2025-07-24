@@ -6,6 +6,9 @@ allow system_app sysfs_doze:file rw_file_perms;
 allow system_app sysfs_vibrator:dir search;
 allow system_app sysfs_vibrator:file rw_file_perms;
 
+# Aware
+get_prop(system_app, vendor_aware_available_prop);
+
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
 
