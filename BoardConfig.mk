@@ -69,6 +69,8 @@ TARGET_NO_BOOTLOADER := true
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
+# Dolby
+include vendor/oneplus/dolby/BoardConfigDolby.mk
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
