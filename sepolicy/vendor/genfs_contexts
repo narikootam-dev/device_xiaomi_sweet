@@ -38,7 +38,8 @@ genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/wakeup/wakeup11    
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                                                                                                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup/wakeup6                                                                                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup/wakeup7                                                                                                                     u:object_r:sysfs_wakeup:s0
-
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup11                                                                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys9/wakeup/wakeup42 											            u:object_r:sysfs_wakeup:s0
 
 # Haptic
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/ulevel u:object_r:sysfs_vibrator:s0
