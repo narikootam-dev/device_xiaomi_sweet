@@ -9,4 +9,7 @@
 
     <!-- Whether to show the GPG UID (name/email) -->
     <bool name="config_show_gpg_uid">true</bool>
+
+    <!-- Show battery cycle count -->
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 </resources>
