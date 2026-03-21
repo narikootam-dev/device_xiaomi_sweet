@@ -103,7 +103,6 @@ pm.dexopt.boot=verify
 
 # Graphics / HWUI
 ro.hwui.render_ahead=20
-ro.config.avoid_gfx_accel=true
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 renderthread.skia.reduceopstasksplitting=true
