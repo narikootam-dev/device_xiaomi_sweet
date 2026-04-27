@@ -23,6 +23,8 @@ dontaudit {
   vendor_sensors_qti
 } vendor_diag_device:chr_file rw_file_perms;
 
+dontaudit untrusted_app vendor_diag_device:chr_file getattr;
+
 dontaudit {
   rild
   vendor_hal_gnss_qti
