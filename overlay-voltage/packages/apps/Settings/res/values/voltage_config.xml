@@ -9,4 +9,7 @@
 
     <!-- 5g only toggle -->
     <bool name="config_supportsVONR">false</bool>
+
+    <!-- Whether to show the GPG UID (name/email) -->
+    <bool name="config_show_gpg_uid">true</bool>
 </resources>
