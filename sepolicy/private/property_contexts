@@ -13,9 +13,6 @@ persist.sensor.                    u:object_r:persist_sensors_prop:s0
 # Fingerprint
 gf.debug.                          u:object_r:exported_default_prop:s0
 
-# PD locater 
-persist.vendor.pd_locater_debug    u:object_r:vendor_pd_locater_dbg_prop:s0
-
 # Xiaomi specific build properties
 ro.boot.hwc                        u:object_r:exported_default_prop:s0
 ro.boot.hwversion                  u:object_r:exported_default_prop:s0
