@@ -167,7 +167,7 @@ SOONG_CONFIG_xiaomiSm6150Vars += \
     livedisplay_support_anti_flicker \
     livedisplay_support_sunlight_enhancement
 SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_anti_flicker ?= false
-SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_sunlight_enhancement ?= true
+SOONG_CONFIG_xiaomiSm6150Vars_livedisplay_support_sunlight_enhancement ?= false
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
