@@ -350,9 +350,8 @@
         -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
-    <!-- The default refresh rate. sweet manages this using the peak refresh rate setting, so set
-         this value to 0 so it has no effect. -->
-    <integer name="config_defaultRefreshRate">0</integer>
+    <!-- Set the default refresh rate to 120Hz. sweet manages refresh rate using the peak refresh rate setting, with 120Hz as the default. -->
+    <integer name="config_defaultRefreshRate">120</integer>
 
     <!-- The default intensity level for haptic feedback. See
          Settings.System.HAPTIC_FEEDBACK_INTENSITY more details on the constant values and
