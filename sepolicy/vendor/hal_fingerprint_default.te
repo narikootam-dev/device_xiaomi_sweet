@@ -3,7 +3,6 @@ type hal_fingerprint_service_xiaomi, vndservice_manager_type;
 type hal_swfingerprint_hwservice, hwservice_manager_type;
 type fingerprint_device, dev_type;
 type fingerprint_data_file, data_file_type, file_type;
-type vendor_sysfs_fod, sysfs_type, fs_type;
 vendor_public_prop(vendor_fp_prop)
 
 vndbinder_use(hal_fingerprint_default)
@@ -19,7 +18,6 @@ allow hal_fingerprint_default touchfeature_device:chr_file rw_file_perms;
 allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
 allow hal_fingerprint_default vendor_qdsp_device:chr_file r_file_perms;
 allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
-allow hal_fingerprint_default vendor_sysfs_fod:file rw_file_perms;
 allow hal_fingerprint_default vendor_sysfs_graphics:file rw_file_perms;
 allow hal_fingerprint_default vendor_xdsp_device:chr_file r_file_perms;
 
