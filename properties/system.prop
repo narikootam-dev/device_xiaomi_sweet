@@ -1,3 +1,6 @@
+# Blur
+debug.renderengine.blur_algorithm=kawase
+
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
